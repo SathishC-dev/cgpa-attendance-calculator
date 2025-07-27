@@ -1,0 +1,67 @@
+<div class="landing-container">
+  <header class="hero-section">
+    <div class="hero-text">
+      <h1>🎓 Smart Student Tools</h1>
+      <p>Your academic companion for quick and accurate calculations.</p>
+    </div>
+  </header>
+  <div class="form-container">
+  <div class="container">
+    <h2>GPA Calculator</h2>
+
+    <table class="gpa-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Subject/Course</th>
+          <th>Credit</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let subject of subjects; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td class="td1">
+            <input
+              type="text"
+              [(ngModel)]="subject.name"
+              placeholder="Enter Subject Name"
+              class="input subject-input"
+            />
+          </td>
+          <td class="td2">
+            <input
+              type="number"
+              [(ngModel)]="subject.credit"
+              placeholder="Credit"
+              class="input credit-input"
+            />
+          </td>
+          <td class="td2">
+            <input
+              type="text"
+              [(ngModel)]="subject.grade"
+              placeholder="Grade"
+              class="input grade-input"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="button-group">
+      <button class="btn secondary" (click)="removeSubject()">Remove</button>
+      <button class="btn secondary" (click)="addSubject()">Add</button>
+      <button class="btn primary" (click)="calculateGPA()">Calculate GPA</button>
+    </div>
+
+    <div class="result" *ngIf="gpa > 0">
+      <p><strong>GPA:</strong> {{ gpa }}</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,204 @@
+.container p{
+  text-align: center;
+  margin: 0%;
+}
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.calculator-container {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.calculator-container h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #111;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #000;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 24px;
+  background-color:#2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  
+  .calculator-container {
+    padding: 26px 16px;
+  }
+
+  .calculator-container h1 {
+    font-size: 1.4rem;
+  }
+
+  input[type="number"],
+  button {
+    font-size: 0.95rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+.landing-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 48px 16px;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: #3267ea;
+  letter-spacing: -1px;
+}
+
+.hero-text p {
+  font-size: 1.22rem;
+  margin-bottom: 1.6rem;
+  color: #444;
+}
+
+.button-group {
+  display: flex;
+  gap: 14px;
+}
+
+.action-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1.06rem;
+  font-weight: 600;
+  background: #3267ea;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #3267ea22;
+  transition: background 0.25s, transform 0.08s;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+}
+
+.action-btn:hover {
+  background: #244bcb;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.action-btn.alt {
+  background: #fff;
+  color: #3267ea;
+  border: 1px solid #c4ccf7;
+  box-shadow: 0 2px 12px #2c497911;
+}
+
+.action-btn.alt:hover {
+  background: #ecf1fd;
+}
+
+/* Responsive styles for hero section */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 28px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .action-btn,
+  .action-btn.alt {
+    width: 80%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .hero-section {
+    padding: 24px 0 16px 0;
+    gap: 20px;
+  }
+}
+

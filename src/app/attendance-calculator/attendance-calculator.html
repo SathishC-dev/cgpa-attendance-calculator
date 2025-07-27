@@ -1,0 +1,42 @@
+<div class="landing-container">
+  <header class="hero-section">
+    <div class="hero-text">
+      <h1>🎓 Smart Student Tools</h1>
+      <p>Your academic companion for quick and accurate calculations.</p> 
+    </div>
+  </header>
+<div class="container">
+  <div class="calculator">
+    <div class="calculator-container">
+      <h1>{{ tittle }}</h1>
+
+      <label>
+        Percentage Required
+        <input type="number" [(ngModel)]="percentage" placeholder="Required percentage">
+      </label>
+
+      <label>
+        Present Days
+        <input type="number" [(ngModel)]="present" placeholder="Enter Present Days">
+      </label>
+
+      <label>
+        Total Working Days
+        <input type="number" [(ngModel)]="total" placeholder="Enter Total Working Days">
+      </label>
+
+      <button (click)="add()">Calculate</button>
+
+      <div class="results">
+        <p *ngIf="sum">Current Attendance: <strong>{{ sum }}</strong></p>
+        <p *ngIf="bunk">{{ bunk }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+

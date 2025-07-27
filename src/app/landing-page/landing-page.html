@@ -1,0 +1,23 @@
+<div class="landing-container">
+  <header class="hero-section">
+    <div class="hero-text">
+      <h1>🎓 Smart Student Tools</h1>
+      <p>Your academic companion for quick and accurate calculations.</p>
+      <div class="button-group">
+        <a routerLink="/cgpa" class="action-btn">CGPA Calculator</a>
+        <a routerLink="/attendance" class="action-btn alt">Attendance Calculator</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="feature-section">
+    <h2>✨ Why Use Our Tools?</h2>
+    <div class="features">
+      <div class="feature-card" *ngFor="let f of features">
+        <img [src]="f.img" [alt]="f.alt" />
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.desc }}</p>
+      </div>
+    </div>
+  </section>
+</div>
